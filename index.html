@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Is Your Ohio Voter Registration Ready? | Code for Dayton</title>
+  <meta name="description" content="Check your Ohio voter registration status, understand how registrations can be challenged, and know exactly what to do if you're challenged at the polls." />
+
+  <!-- Favicons -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="img/favicon-180.png" />
+
+  <!-- Tailwind CSS via CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom styles (overrides / additions) -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════
+     STICKY DEADLINE BANNER
+════════════════════════════════════════════════════════════ -->
+<div id="deadline-banner" role="banner" aria-label="Registration deadlines">
+  <div>
+    ⚠️ <strong>Ohio Voter Registration Deadlines — 30 days before each election</strong>
+  </div>
+  <div class="deadline-dates">
+    <span><strong>May 2026 Primary:</strong> April&nbsp;6,&nbsp;2026</span>
+    <span><strong>Nov 2026 General:</strong> October&nbsp;5,&nbsp;2026</span>
+    <span>
+      <a href="https://olvr.ohiosos.gov/" target="_blank" rel="noopener">Register / Update Now →</a>
+    </span>
+  </div>
+  <div id="days-until-deadline" style="margin-top:0.2rem; font-size:0.82rem; font-weight:400; opacity:0.9;"></div>
+</div>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     HERO / HEADER
+════════════════════════════════════════════════════════════ -->
+<header id="hero">
+  <div class="container">
+
+    <div class="logo-lockup">
+      <img src="img/cfd-gem.svg" alt="Code for Dayton logo" width="52" height="52" />
+      <div class="org-name">Code for Dayton</div>
+    </div>
+
+    <h1>Is Your Ohio Voter<br>Registration Ready?</h1>
+
+    <p class="subtitle">
+      Know your status. Understand your rights. Be prepared
+      for the May&nbsp;2026 Primary and November&nbsp;2026 General elections.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="https://voterlookup.ohiosos.gov/"
+         target="_blank" rel="noopener"
+         class="btn btn-primary"
+         aria-label="Check my Ohio voter registration — opens Ohio Secretary of State website">
+        ✅ Check My Registration
+      </a>
+      <a href="#step-challenges"
+         class="btn btn-secondary"
+         aria-label="Learn about voter registration challenges — scroll to challenges section">
+        ⚠️ Learn About Challenges
+      </a>
+    </div>
+
+  </div>
+</header>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════════════════════════ -->
+<main id="main-content">
+  <div class="container">
+
+
+    <!-- ─────────────────────────────────────────────────────
+         STEP 1: CHECK YOUR STATUS
+    ───────────────────────────────────────────────────────── -->
+    <section class="section" id="step-check" aria-labelledby="step1-title">
+
+      <div class="step-header">
+        <div class="step-number" aria-hidden="true">1</div>
+        <div>
+          <h2 class="step-title" id="step1-title">Check Your Registration Status</h2>
+          <p class="step-subtitle">Takes 2 minutes — do it now</p>
+        </div>
+      </div>
+
+      <!-- Portal CTA -->
+      <a href="https://voterlookup.ohiosos.gov/"
+         target="_blank" rel="noopener"
+         class="portal-card"
+         aria-label="Open Ohio MyVoter portal to check your registration">
+        <div class="portal-icon" aria-hidden="true">🗳️</div>
+        <div>
+          <div class="portal-label">Ohio Voter Lookup Portal</div>
+          <div class="portal-url">voterlookup.ohiosos.gov</div>
+        </div>
+        <span aria-hidden="true" style="margin-left:auto; font-size:1.2rem;">↗</span>
+      </a>
+
+      <!-- What to verify -->
+      <div class="card card-blue">
+        <p style="font-weight:700; margin-bottom:0.5rem; color:var(--blue-900);">
+          What to verify in the portal:
+        </p>
+        <ul class="checklist" aria-label="Registration items to verify">
+          <li><span class="check-icon" aria-hidden="true">☑</span> Your <strong>full legal name</strong> is spelled correctly</li>
+          <li><span class="check-icon" aria-hidden="true">☑</span> Your <strong>current address</strong> is on file</li>
+          <li><span class="check-icon" aria-hidden="true">☑</span> Your <strong>party affiliation</strong> (required to vote in primary)</li>
+          <li><span class="check-icon" aria-hidden="true">☑</span> Your status shows as <strong>Active</strong></li>
+        </ul>
+      </div>
+
+      <!-- Deadlines -->
+      <div class="card card-amber" style="margin-top:1rem;">
+        <p style="font-weight:700; color:var(--amber-700); margin-bottom:0.65rem;">
+          ⏰ Registration Deadlines (30 days before election)
+        </p>
+        <div class="deadline-grid">
+          <div class="deadline-pill">
+            <div class="deadline-election">May 2026 Primary</div>
+            <div class="deadline-date">April 6, 2026</div>
+            <div class="deadline-label">Election Day: May 5</div>
+          </div>
+          <div class="deadline-pill">
+            <div class="deadline-election">Nov 2026 General</div>
+            <div class="deadline-date">October 5, 2026</div>
+            <div class="deadline-label">Election Day: Nov 3</div>
+          </div>
+        </div>
+        <p style="font-size:0.82rem; color:var(--gray-500); margin-top:0.5rem;">
+          Verify exact dates at
+          <a href="https://www.ohiosos.gov/elections/voters/" target="_blank" rel="noopener">ohiosos.gov/elections/voters</a>
+          before each event.
+        </p>
+      </div>
+
+      <!-- Skip link -->
+      <a href="#step-action" class="skip-link" aria-label="Already registered and confirmed active — skip to Step 3: What to do if challenged">
+        ✅ Already registered &amp; confirmed active?
+        <strong>Skip to Step 3 →</strong>
+      </a>
+
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────
+         STEP 2: KNOW THE CHALLENGES
+    ───────────────────────────────────────────────────────── -->
+    <section class="section" id="step-challenges" aria-labelledby="step2-title">
+
+      <div class="step-header">
+        <div class="step-number" aria-hidden="true">2</div>
+        <div>
+          <h2 class="step-title" id="step2-title">Know the Challenges</h2>
+          <p class="step-subtitle">Tap each issue to learn what it means and how to fix it</p>
+        </div>
+      </div>
+
+      <ul class="accordion-list" aria-label="Voter registration challenges">
+
+        <!-- 1: Voter Roll Purge -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Voter Roll Purge — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">🗑️</span>
+            <span class="accordion-trigger-text">
+              <strong>Voter Roll Purge (Supplemental Process)</strong>
+              <span class="accordion-summary">You may have been removed if inactive for 6+ years</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Ohio removes voters who have been <strong>inactive for 6 consecutive years</strong> and did not
+              respond to a confirmation notice sent by the county Board of Elections (BOE).
+              "Inactive" means no voted elections and no returned mail contact during that period.
+            </p>
+            <p style="margin-top:0.5rem;">
+              This process was upheld by the U.S. Supreme Court in
+              <em>Husted v. A. Philip Randolph Institute</em> (2018).
+              It is sometimes called the "use it or lose it" purge.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Fix:</strong> Check your status in MyVoter. If you were removed,
+              re-register at
+              <a href="https://olvr.ohiosos.gov/" target="_blank" rel="noopener">olvr.ohiosos.gov</a>
+              before the deadline. You can also register in person at your county BOE up to 30 days
+              before the election.
+            </div>
+            <p class="law-ref">ORC 3503.21 | Husted v. A. Philip Randolph Institute, 584 U.S. 756 (2018)</p>
+          </div>
+        </li>
+
+        <!-- 2: Address Mismatch -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Address Mismatch — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">🏠</span>
+            <span class="accordion-trigger-text">
+              <strong>Address Mismatch / You Moved</strong>
+              <span class="accordion-summary">Voting at the wrong address means a limited provisional ballot</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              If you've moved and haven't updated your registration, your registration is still
+              linked to your old address. Showing up at a different precinct may result in
+              a <strong>provisional ballot</strong> that only counts for
+              statewide and countywide races — not local races.
+            </p>
+            <p style="margin-top:0.5rem;">
+              Ohio does allow you to vote a provisional ballot on Election Day if you moved
+              within the same county and didn't update your address in time — but your local
+              races won't count.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Fix:</strong> Update your address at
+              <a href="https://olvr.ohiosos.gov/" target="_blank" rel="noopener">olvr.ohiosos.gov</a>
+              or at your county BOE before the deadline. You can also update at
+              <a href="https://vote.gov/" target="_blank" rel="noopener">RegisterToVote.gov</a>.
+            </div>
+            <p class="law-ref">ORC 3503.16</p>
+          </div>
+        </li>
+
+        <!-- 3: Name Mismatch -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Name Mismatch — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">📛</span>
+            <span class="accordion-trigger-text">
+              <strong>Name Mismatch</strong>
+              <span class="accordion-summary">Marriage, divorce, or legal name change not updated</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              If your legal name has changed (marriage, divorce, court order) and your
+              voter registration still shows your former name, the name on your photo ID
+              must match your registration <strong>closely enough</strong> for poll workers
+              to confirm your identity.
+            </p>
+            <p style="margin-top:0.5rem;">
+              Poll workers can accept minor differences (middle name vs. initial),
+              but a completely different last name may trigger a challenge.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Fix:</strong> Update your registration at
+              <a href="https://olvr.ohiosos.gov/" target="_blank" rel="noopener">olvr.ohiosos.gov</a>.
+              On Election Day, bring supporting documentation (marriage certificate, court order)
+              to your polling place in case it's needed.
+            </div>
+            <p class="law-ref">ORC 3503.14</p>
+          </div>
+        </li>
+
+        <!-- 4: Photo ID -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Photo ID Requirements — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">🪪</span>
+            <span class="accordion-trigger-text">
+              <strong>Photo ID Requirements (HB 458, 2023)</strong>
+              <span class="accordion-summary">Ohio now requires a qualifying photo ID to vote</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              As of 2023, Ohio requires voters to present an acceptable
+              <strong>photo ID</strong> at the polls. Accepted forms include:
+            </p>
+            <ul class="checklist" style="margin: 0.5rem 0 0.75rem;" aria-label="Accepted photo IDs">
+              <li><span class="check-icon" aria-hidden="true">✔</span> Ohio Driver's License or State ID</li>
+              <li><span class="check-icon" aria-hidden="true">✔</span> U.S. Military ID</li>
+              <li><span class="check-icon" aria-hidden="true">✔</span> U.S. Passport or Passport Card</li>
+              <li><span class="check-icon" aria-hidden="true">✔</span> Ohio National Guard ID</li>
+              <li><span class="check-icon" aria-hidden="true">✔</span> Veterans Affairs (VA) ID Card</li>
+            </ul>
+            <p>
+              <strong>Important:</strong> The address on your ID no longer needs to match your
+              registration address. Your <strong>name and photo</strong> are what matter.
+            </p>
+            <div class="fix-box">
+              <strong>✅ No qualifying ID?</strong> You can still vote using a
+              <strong>provisional ballot</strong> and signing an affirmation form.
+              Your provisional ballot will be counted if the BOE confirms your identity.
+              Get a free Ohio State ID at any BMV.
+            </div>
+            <p class="law-ref">Ohio HB 458 (effective 2023) | ORC 3505.181</p>
+          </div>
+        </li>
+
+        <!-- 5: Poll Challenger -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Poll Challenger — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">🙋</span>
+            <span class="accordion-trigger-text">
+              <strong>Poll Challenger (ORC 3505.20)</strong>
+              <span class="accordion-summary">Any person can formally challenge your eligibility</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              Ohio law allows any person to challenge a voter's eligibility at the polls.
+              The challenger <strong>must state specific grounds in writing</strong>
+              — a general objection is not sufficient.
+              The challenge must be based on a genuine belief that the voter is ineligible
+              (e.g., not a resident of the precinct, not 18, not a citizen).
+            </p>
+            <p style="margin-top:0.5rem;">
+              <strong>Your rights:</strong> If challenged, you may state your name and
+              address <strong>under oath</strong>. You are still entitled to vote —
+              you will receive a provisional ballot if the challenge is initially upheld
+              by election officials. The provisional ballot is adjudicated by the BOE
+              after Election Day.
+            </p>
+            <div class="fix-box">
+              <strong>✅ What to do:</strong> Remain calm. State your name and address.
+              Request a provisional ballot. Note the challenger's stated reason.
+              Call the Election Protection Hotline: <strong>1-866-OUR-VOTE</strong>.
+            </div>
+            <p class="law-ref">ORC 3505.20 | ORC 3505.181 (provisional ballots)</p>
+          </div>
+        </li>
+
+        <!-- 6: Wrong Precinct -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Wrong Precinct or Poll Location — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">📍</span>
+            <span class="accordion-trigger-text">
+              <strong>Wrong Precinct / Poll Location</strong>
+              <span class="accordion-summary">Voting at the wrong location limits which races count</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              If you vote at the wrong precinct in Ohio, your ballot will be a
+              <strong>provisional ballot</strong> and will only count for
+              statewide and countywide races — <strong>not local races</strong>
+              (city council, school board, local levies, etc.).
+            </p>
+            <p style="margin-top:0.5rem;">
+              Polling locations can change between elections. Even if you've voted at
+              the same location before, verify your polling place before Election Day.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Fix:</strong> Look up your correct polling place at
+              <a href="https://voterlookup.ohiosos.gov/" target="_blank" rel="noopener">MyVoter</a>
+              or the
+              <a href="https://www.ohiosos.gov/elections/voters/find-my-ohio-polling-place-and-elected-officials/" target="_blank" rel="noopener">Ohio SOS polling place finder</a>
+              before Election Day. Save the address in your phone.
+            </div>
+            <p class="law-ref">ORC 3505.183</p>
+          </div>
+        </li>
+
+        <!-- 7: Absentee Signature Challenge -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Absentee Ballot Signature Challenge — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">✉️</span>
+            <span class="accordion-trigger-text">
+              <strong>Absentee / Mail Ballot Signature Challenge</strong>
+              <span class="accordion-summary">Mismatched envelope signature can get your ballot rejected</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              When you return an absentee ballot, the signature on the envelope is compared
+              to your signature on file with the county BOE. If the signatures don't match
+              closely enough, the BOE can <strong>reject (fail to count) your ballot</strong>.
+            </p>
+            <p style="margin-top:0.5rem;">
+              <strong>The good news:</strong> Ohio law gives you the right to
+              <strong>cure (fix) a signature mismatch</strong>. The county BOE must notify
+              you of the problem. You typically have until <strong>7 days after the election</strong>
+              to cure the issue.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Fix:</strong> Track your absentee ballot status at
+              <a href="https://voterlookup.ohiosos.gov/" target="_blank" rel="noopener">MyVoter</a>
+              after returning it. If notified of a mismatch, respond immediately by contacting
+              your county BOE. Don't ignore a cure notice — the deadline is firm.
+            </div>
+            <p class="law-ref">ORC 3509.07 | ORC 3509.09</p>
+          </div>
+        </li>
+
+        <!-- 8: Felony Conviction -->
+        <li class="accordion-item">
+          <button class="accordion-trigger" type="button"
+                  aria-label="Felony Conviction Status — tap to expand">
+            <span class="accordion-icon" aria-hidden="true">⚖️</span>
+            <span class="accordion-trigger-text">
+              <strong>Felony Conviction Status</strong>
+              <span class="accordion-summary">Voting rights are suspended while incarcerated or on supervision</span>
+            </span>
+            <span class="accordion-chevron" aria-hidden="true">▼</span>
+          </button>
+          <div class="accordion-body">
+            <p>
+              In Ohio, you <strong>temporarily lose your right to vote</strong> if you are:
+            </p>
+            <ul style="margin: 0.5rem 0 0.75rem; padding-left:1.25rem; line-height:1.8;">
+              <li>Currently <strong>incarcerated</strong> for a felony conviction, OR</li>
+              <li>Under <strong>community control</strong> (probation or parole) for a felony conviction</li>
+            </ul>
+            <p>
+              Your voting rights are <strong>automatically restored</strong> upon completion
+              of your sentence, including any period of community control. No petition or
+              formal application is needed.
+            </p>
+            <p style="margin-top:0.5rem;">
+              Misdemeanor convictions, including misdemeanor-level DUIs and minor offenses,
+              do <strong>not</strong> affect your voting rights in Ohio.
+            </p>
+            <div class="fix-box">
+              <strong>✅ Unsure about your status?</strong> Contact your county Board of
+              Elections or the
+              <a href="https://www.acluohio.org/" target="_blank" rel="noopener">ACLU of Ohio</a>
+              (voter protection project) for guidance. Don't guess — verify.
+            </div>
+            <p class="law-ref">Ohio Constitution, Art. V, §4 | ORC 2961.01</p>
+          </div>
+        </li>
+
+      </ul><!-- /.accordion-list -->
+
+    </section>
+
+
+    <!-- ─────────────────────────────────────────────────────
+         STEP 3: IF YOU'RE CHALLENGED
+    ───────────────────────────────────────────────────────── -->
+    <section class="section" id="step-action" aria-labelledby="step3-title">
+
+      <div class="step-header">
+        <div class="step-number" aria-hidden="true">3</div>
+        <div>
+          <h2 class="step-title" id="step3-title">If You're Challenged at the Polls</h2>
+          <p class="step-subtitle">You have rights — here's exactly what to do</p>
+        </div>
+      </div>
+
+      <div id="step-challenged">
+        <p style="font-size:0.9rem; color:var(--blue-900); font-weight:600; margin-bottom:0.75rem;">
+          Stay calm. A challenge does not mean you can't vote.
+        </p>
+
+        <ol class="action-steps" aria-label="Steps to take if challenged at the polls">
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">1</div>
+            <div class="action-text">
+              <strong>Stay calm — you have legal rights</strong>
+              <span>Take a breath. Being challenged is uncomfortable but you are protected by Ohio law.</span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">2</div>
+            <div class="action-text">
+              <strong>Demand a provisional ballot</strong>
+              <span>
+                Poll workers are required by law to provide you a provisional ballot.
+                Say clearly: <em>"I am entitled to vote a provisional ballot."</em>
+              </span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">3</div>
+            <div class="action-text">
+              <strong>Complete the provisional ballot envelope fully and carefully</strong>
+              <span>
+                Fill in every field legibly. Errors or omissions can affect whether
+                your ballot is counted. Sign the envelope.
+              </span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">4</div>
+            <div class="action-text">
+              <strong>Note the challenger's name and stated reason if possible</strong>
+              <span>
+                Challenges must be in writing with specific grounds.
+                Write down what you hear and who said it.
+              </span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">5</div>
+            <div class="action-text">
+              <strong>Take a photo of your provisional ballot receipt</strong>
+              <span>
+                You will receive a receipt with a tracking number. Keep it —
+                you'll need it to follow up on your ballot's status.
+              </span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">6</div>
+            <div class="action-text">
+              <strong>Call a voter protection hotline immediately</strong>
+              <span>
+                Contact Election Protection while you're still at the polling place
+                if possible. They can provide real-time legal guidance.
+              </span>
+            </div>
+          </li>
+
+          <li class="action-step">
+            <div class="action-num" aria-hidden="true">7</div>
+            <div class="action-text">
+              <strong>Follow up with your county BOE within 7 days if needed</strong>
+              <span>
+                Track your provisional ballot status. If contacted about a cure
+                (e.g., missing signature), respond before the deadline.
+              </span>
+            </div>
+          </li>
+
+        </ol><!-- /.action-steps -->
+
+        <div class="hotline-callout">
+          <div class="hotline-label">Election Protection Hotline</div>
+          <div class="hotline-number">
+            <a href="tel:+18666878683" aria-label="Call 1-866-OUR-VOTE">1-866-OUR-VOTE</a>
+          </div>
+          <div class="hotline-name">1-866-687-8683 | Available Election Day</div>
+        </div>
+
+      </div><!-- /#step-challenged -->
+
+    </section>
+
+  </div><!-- /.container (main) -->
+</main>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     RESOURCES / FOOTER
+════════════════════════════════════════════════════════════ -->
+<footer id="resources" aria-labelledby="resources-title">
+  <div class="container">
+
+    <h2 id="resources-title">Key Resources</h2>
+
+    <ul class="resource-list" aria-label="Voter registration resources">
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">🗳️</span>
+        <div>
+          <a href="https://voterlookup.ohiosos.gov/" target="_blank" rel="noopener">
+            Ohio Voter Lookup (voterlookup.ohiosos.gov)
+          </a>
+          <div class="resource-desc">Check your registration status, polling place, and ballot info</div>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">📝</span>
+        <div>
+          <a href="https://olvr.ohiosos.gov/" target="_blank" rel="noopener">
+            Ohio Online Voter Registration (OLVR)
+          </a>
+          <div class="resource-desc">Register, update your address, or change party affiliation</div>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">📍</span>
+        <div>
+          <a href="https://www.ohiosos.gov/elections/voters/find-my-ohio-polling-place-and-elected-officials/"
+             target="_blank" rel="noopener">
+            Find Your Ohio Polling Place
+          </a>
+          <div class="resource-desc">Look up your correct polling location before Election Day</div>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">⚖️</span>
+        <div>
+          <a href="https://www.acluohio.org/" target="_blank" rel="noopener">
+            ACLU of Ohio — Voter Protection
+          </a>
+          <div class="resource-desc">Legal resources, rights information, and voter protection hotline</div>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">📞</span>
+        <div>
+          <a href="tel:+18666878683" aria-label="Call Election Protection Hotline 1-866-OUR-VOTE">
+            Election Protection: 1-866-OUR-VOTE
+          </a>
+          <div class="resource-desc">1-866-687-8683 — nonpartisan voter assistance, available Election Day</div>
+        </div>
+      </li>
+
+      <li class="resource-item">
+        <span class="resource-icon" aria-hidden="true">🌐</span>
+        <div>
+          <a href="https://vote.gov/" target="_blank" rel="noopener">
+            RegisterToVote.gov
+          </a>
+          <div class="resource-desc">Federal portal for registration updates and state-specific info</div>
+        </div>
+      </li>
+
+    </ul>
+
+    <hr class="footer-divider" />
+
+    <p class="footer-meta">
+      Prepared by <strong>Code for Dayton</strong>
+      for distribution at community events.<br>
+      Information covers the <strong>May 2026 Ohio Primary</strong> and
+      <strong>November 2026 Ohio General Election</strong>.<br>
+      <br>
+      <em>This page is for informational purposes only and does not constitute legal advice.
+      For legal assistance, contact the ACLU of Ohio or a qualified attorney.</em><br>
+      <br>
+      Verify all dates at
+      <a href="https://www.ohiosos.gov/elections/voters/" target="_blank" rel="noopener">ohiosos.gov/elections/voters</a>
+      before each event.
+    </p>
+
+  </div>
+</footer>
+
+<!-- JavaScript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
