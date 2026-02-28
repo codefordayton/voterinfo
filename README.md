@@ -1,4 +1,4 @@
-# Ohio Voter Registration Info — Code for Dayton
+# Ohio Voter Registration Info — Code for Dayton (CfD)
 
 Static micro-site distributed via QR code at events. Walks Ohio voters through checking their registration status, understanding how registrations can be challenged, and knowing exactly what to do if challenged at the polls.
 
